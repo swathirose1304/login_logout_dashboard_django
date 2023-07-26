@@ -1,0 +1,34 @@
+<!-- user_profile.html -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>User Profile</title>
+    <style>
+        body {
+            padding: 40px;
+            background-color: #f8f9fa;
+            text-align: center; /* Center-align the contents */
+        }
+
+        h1 {
+            color: green; 
+        }
+
+        div {
+            margin-top: 30px; /* Add some spacing between the heading and the content */
+        }
+    </style>
+</head>
+<body>
+    <h1>User Profile</h1>
+    <div>
+        <h2>Welcome, {{ user_profile.username }}!</h2>
+        <p>Username: {{ user_profile.username }}</p>
+        <p>Email: {{ user_profile.email }}</p>
+        <!-- Display other user profile details here -->
+    </div>
+</body>
+</html>

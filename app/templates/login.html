@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+        button{
+            background-color: #4CAF50;
+            width: 25%;
+            padding: 15px;
+            color: black;
+            border: none;
+            float: center;
+            font-size: 15px;
+        }
+        label{
+            font-size: 20px;
+        }
+        form{
+            border: 3px solid #f1f1f1;
+        }
+        input[type=password],input[type=text]{
+            width: 50%;
+            font-size: 15px;
+            margin: 8px 0px;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+        button:hover{
+            opacity:0.7;
+
+        }
+        .container{
+            padding: 50px;
+            background-color: white;
+        }
+        /* .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        img.avatar {
+            width: 20%;
+            border-radius: 50%;
+        }   */
+    </style>
+</head>
+<body>
+    <center><h1>Login Form</h1></center>
+    <form action="" method="post">
+
+        {% csrf_token %}
+        <!-- {% load static %} -->
+        <!-- {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+        {% endif %} -->
+        <center><div class="container">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" placeholder="Enter your name" name="username" float="right" required><br>
+            <label for="password"><b>Password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required><br>
+            <button type="submit"><b>Login</b></button><br>
+            Don't have an account? <a href="{% url 'signup' %}">Register</a>
+        </div></center>
+    </form>
+</body>
+</html>
